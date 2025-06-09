@@ -6,25 +6,24 @@ class AuthenticationError(Exception):
     pass
 
 
-def download_files(counter: int):
+def download_files(page_num: int):
     try:
         drive = authenticate()
     except:
         raise AuthenticationError
     
-    file_list = get_file_list(constants.DAILY_QURAN_FOLDER_ID, drive)
+    pages_file_list = get_file_list(constants.DAILY_QURAN_FOLDER_ID, drive)
+    audio_file_list = get_file_list(constants.AUDIO_FOLDER_ID, drive)
+    translations_file_list = get_file_list(constants.DAILY_QURAN_FOLDER_ID, drive)
 
-    image_filename = f"{counter+2}.jpg"
-    translation_filename = f"{counter}.png"
-    recording_filename = f"{counter}.mp3"
+    page_file = f"{page_num}.jpg"
+    audio_file = f"{page_num}.mp3"
+    translation_file = f"{page_num}.jpeg"
 
-    try:
-        download_file(image_filename, file_list)
-        download_file(translation_filename, file_list)
-        download_file(recording_filename, file_list)
-    except:
-        raise FileNotFoundError
-
+    download_file(page_file, pages_file_list)
+    download_file(audio_file, audio_file_list)
+    download_file(translation_file, translations_file_list)
+    
 def authenticate():
     gauth = GoogleAuth()
 
