@@ -23,7 +23,8 @@ Difficulties faced on drone project:
 This is a bot that will fetch 
 
 Starting over. Steps:
-- gdrive media fetcher 
+- gdrive media fetcher [ DONE ] 
 - whatsapp sending component
+- cleanup
 - automate
 - skip the google drive component

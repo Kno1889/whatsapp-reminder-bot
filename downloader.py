@@ -49,9 +49,6 @@ def get_file_list(folder_id: str, drive: GoogleDrive):
         {"q": f"'{folder_id}' in parents and trashed=false"}
     ).GetList()
 
-    # for file in file_list:
-    #     print("title: {}, id: {}".format(file["title"], file["id"]))
-
     return file_list
 
 
