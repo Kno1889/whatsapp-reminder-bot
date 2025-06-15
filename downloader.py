@@ -12,9 +12,9 @@ def download_files(page_num: int):
     except:
         raise AuthenticationError
     
-    pages_file_list = get_file_list(constants.DAILY_QURAN_FOLDER_ID, drive)
+    pages_file_list = get_file_list(constants.PAGES_FOLDER_ID, drive)
     audio_file_list = get_file_list(constants.AUDIO_FOLDER_ID, drive)
-    translations_file_list = get_file_list(constants.DAILY_QURAN_FOLDER_ID, drive)
+    translations_file_list = get_file_list(constants.TRANSLATIONS_FOLDER_ID, drive)
 
     page_file = f"{page_num}.jpg"
     audio_file = f"{page_num}.mp3"
