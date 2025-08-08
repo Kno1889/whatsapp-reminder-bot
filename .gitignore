@@ -3,3 +3,7 @@ creds.json
 constants.py
 client_secrets.json
 wAbot/
+.daily_script_counter
+run_daily.sh
+.DS_Store
+__pycache__/

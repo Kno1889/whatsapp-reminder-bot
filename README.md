@@ -28,3 +28,5 @@ Starting over. Steps:
 - cleanup
 - automate
 - skip the google drive component
+
+# Deploy Instructions
